@@ -1,0 +1,7 @@
+#basic
+node_modules
+reports
+videos
+
+#ignoruje plik z danymi
+cypress/fixtures/user.json
