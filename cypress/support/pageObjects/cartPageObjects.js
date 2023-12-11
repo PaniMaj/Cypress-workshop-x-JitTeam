@@ -1,4 +1,4 @@
-import { productSelectors, basketSelectors } from "../selectors.js";
+import { cartSelectors } from "../selectors.js";
 
 export class Cart {
   visitCartPage() {
@@ -15,7 +15,7 @@ export class Cart {
   }
 
   clickCheckoutButton() {
-    cy.get(basketSelectors.checkoutCartButton1).click();
+    cy.get(cartSelectors.checkoutCartButton1).click();
   }
 
   clickConfirmOrder() {
@@ -23,11 +23,11 @@ export class Cart {
   }
 
   confirmOrder() {
-    cy.get(basketSelectors.confirmOrderButton).should("be.visible").click();
+    cy.get(cartSelectors.confirmOrderButton).should("be.visible").click();
   }
 
   assertCheckoutConfirmation() {
-    cy.get(basketSelectors.confirmationOrder).should(
+    cy.get(cartSelectors.confirmationOrder).should(
       "include.text",
       "Your Order Has Been Processed!"
     );
@@ -35,8 +35,8 @@ export class Cart {
 
   checkCartCheckoutModal() {
     cy.get("body").then((body) => {
-      if (body.find("#returnPolicyModalLabel").length > 0) {
-        cy.get(".modal-footer > .btn").should("be.visible").click();
+      if (body.find(cartSelectors.modalLabel).length > 0) {
+        cy.get(cartSelectors.modalButton).should("be.visible").click();
       }
     });
   }

@@ -20,13 +20,15 @@ export const productSelectors = {
   contentPage: ".contentpanel",
   productQuantity: "#product_quantity",
   productPropertyShoeSize: "#option346",
-  addProductToBasketButton: ".productcart",
+  addProductToCartButton: ".productcart",
 };
 
-export const basketSelectors = {
+export const cartSelectors = {
   checkoutCartButton1: "#cart_checkout1",
   confirmOrderButton: "#checkout_btn",
   confirmationOrder: ".maintext",
+  modalButton: ".modal-footer > .btn",
+  modalLabel: "#returnPolicyModalLabel",
 };
 
 // class -> .class_name

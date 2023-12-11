@@ -7,7 +7,7 @@ import { cartPage } from "../support/pageObjects/cartPageObjects.js";
 
 //addictional data
 
-describe("Login funcionality", () => {
+describe("Purchase funcionality", () => {
   it("POSITIVE: User should login after give a proper credentials and be able to purchase product from different categories", () => {
     //checking proper login
     mainPage.visitMainPage();
@@ -15,7 +15,6 @@ describe("Login funcionality", () => {
     mainPage.clickLoginOrRegisterButton();
     loginPage.fillLoginInputs(user.userName, user.userValidPassword);
     loginPage.clickLoginButton();
-    //loginPage.assertUserValidCredentials();
 
     // //first product add to cart
     productsPage.clickCategoryFromTopMenu("MAKEUP");
@@ -37,10 +36,10 @@ describe("Login funcionality", () => {
     productsPage.changePropertyOfProductShoeSize("UK 5 / Red");
     productsPage.clickAddToCartButton();
 
-    //go to basket
+    //go to cart
     cartPage.visitCartPage();
 
-    //check basket quantity
+    //check cart quantity
     cartPage.checkCartProductQuantity(
       "#cart_quantity59440e65f322af942e2214c72e03177c2b",
       "1",
