@@ -21,7 +21,7 @@ https://docs.cypress.io/api
 
 ## How to chceck project:
 
-1. Install Node JS
+1. Install [Node JS](https://nodejs.org/en/download/)
 2. Clone the project to your local machine:
    ```
    git clone https://github.com/PaniMaj/Cypress-workshop-x-JitTeam.git
