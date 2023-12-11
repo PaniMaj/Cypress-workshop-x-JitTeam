@@ -2,6 +2,7 @@
 node_modules
 reports
 videos
+screenshots
 
 #ignore file with sensitive data
 #cypress/fixtures/user.json
