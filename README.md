@@ -19,7 +19,7 @@
 https://automationteststore.com/
 https://docs.cypress.io/api
 
-## How to start:
+## How to chceck project:
 
 1. Install Node JS
 2. Clone the project to your local machine:
