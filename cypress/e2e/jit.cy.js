@@ -1,5 +1,4 @@
 import user from "../fixtures/user.json";
-//require("dotenv").config();
 import { loginPage } from "../support/pageObjects/loginObjects.js";
 import { mainPage } from "../support/pageObjects/mainPageObjects.js";
 import { accountPage } from "../support/pageObjects/accountPageObjects.js";
