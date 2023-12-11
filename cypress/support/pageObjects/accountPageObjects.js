@@ -12,4 +12,4 @@ export class Account {
   }
 }
 
-export const AccountPage = new Account();
+export const accountPage = new Account();

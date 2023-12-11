@@ -34,4 +34,4 @@ export class Products {
   }
 }
 
-export const ProductsPage = new Products();
+export const productsPage = new Products();

@@ -3,5 +3,5 @@ node_modules
 reports
 videos
 
-#ignoruje plik z danymi
-cypress/fixtures/user.json
+#ignore file with sensitive data
+#cypress/fixtures/user.json

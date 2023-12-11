@@ -14,3 +14,7 @@
 - creation of `Page Object Commands`
 - creation of `Page Object Model`
 - writing custom scripts
+
+**Links**
+https://automationteststore.com/
+https://docs.cypress.io/api

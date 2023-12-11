@@ -10,4 +10,4 @@ export class Main {
   }
 }
 
-export const MainPage = new Main();
+export const mainPage = new Main();

@@ -1,35 +1,35 @@
 import user from "../fixtures/user.json";
 //require("dotenv").config();
-import { LoginPage } from "../support/pageObjects/loginObjects.js";
-import { MainPage } from "../support/pageObjects/mainPageObjects.js";
-import { AccountPage } from "../support/pageObjects/accountPageObjects.js";
+import { loginPage } from "../support/pageObjects/loginObjects.js";
+import { mainPage } from "../support/pageObjects/mainPageObjects.js";
+import { accountPage } from "../support/pageObjects/accountPageObjects.js";
 
 describe("Login funcionality", () => {
   beforeEach(() => {
-    MainPage.visitMainPage();
-    MainPage.clickLoginOrRegisterButton();
+    mainPage.visitMainPage();
+    mainPage.clickLoginOrRegisterButton();
   });
 
   it("POSITIVE: User should login after give a proper credentials", () => {
-    LoginPage.fillLoginInputs(user.userName, user.userValidPassword);
-    LoginPage.clickLoginButton();
-    LoginPage.assertUserValidCredentials();
+    loginPage.fillLoginInputs(user.userName, user.userValidPassword);
+    loginPage.clickLoginButton();
+    loginPage.assertUserValidCredentials();
   });
 
   it("NEGATIVE: User should not login after give a wrong credentials", () => {
-    LoginPage.fillLoginInputs(user.userName, user.userInvalidPassword);
-    LoginPage.clickLoginButton();
-    LoginPage.assertUserInvalidCredentials;
+    loginPage.fillLoginInputs(user.userName, user.userInvalidPassword);
+    loginPage.clickLoginButton();
+    loginPage.assertUserInvalidCredentials;
   });
 
   it("POSITIVE: User should login and log out after give a proper credentials", () => {
-    LoginPage.fillLoginInputs(user.userName, user.userValidPassword);
-    LoginPage.clickLoginButton();
+    loginPage.fillLoginInputs(user.userName, user.userValidPassword);
+    loginPage.clickLoginButton();
 
-    AccountPage.assertUserAccountBoxIsVisible();
+    accountPage.assertUserAccountBoxIsVisible();
 
-    AccountPage.logoutFromUserAccountBox();
-    LoginPage.assertUserLogoutConfirmation();
+    accountPage.logoutFromUserAccountBox();
+    loginPage.assertUserLogoutConfirmation();
   });
 });
 

@@ -1,11 +1,11 @@
 import { productSelectors, basketSelectors } from "../selectors.js";
 
-export class Basket {
-  visitBasketPage() {
+export class Cart {
+  visitCartPage() {
     cy.visit("/index.php?rt=checkout/cart");
   }
 
-  checkBasketProductQuantity(productQuantity, value, productName) {
+  checkCartProductQuantity(productQuantity, value, productName) {
     cy.get(productQuantity)
       .should("have.value", value)
       .parent()
@@ -32,6 +32,14 @@ export class Basket {
       "Your Order Has Been Processed!"
     );
   }
+
+  checkCartCheckoutModal() {
+    cy.get("body").then((body) => {
+      if (body.find("#returnPolicyModalLabel").length > 0) {
+        cy.get(".modal-footer > .btn").should("be.visible").click();
+      }
+    });
+  }
 }
 
-export const BasketPage = new Basket();
+export const cartPage = new Cart();

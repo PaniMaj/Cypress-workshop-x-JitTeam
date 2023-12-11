@@ -27,11 +27,11 @@ export class Login {
   }
 
   assertUserLogoutConfirmation() {
-    cy.get(loginSelectors.confirmationOrder).should(
+    cy.get(loginSelectors.loginConfirmMaintext).should(
       "include.text",
       "Account Logout"
     );
   }
 }
 
-export const LoginPage = new Login();
+export const loginPage = new Login();
